@@ -121,7 +121,7 @@ function updateAlerts() {
     if (warn1 === 1 || energy1 > threshold1) {
         r1Alert.className = 'param-card alert-card';
         r1Alert.querySelector('.param-icon').textContent = '⚠️';
-        r1Msg.textContent = `Vượt ngưỡng ${(energy1 - threshold1).toFixed(1)} kWh`;
+        r1Msg.textContent = `Vượt ngưỡng ${(threshold1).toFixed(1)} kWh`;
     } else {
         r1Alert.className = 'param-card alert-card success';
         r1Alert.querySelector('.param-icon').textContent = '✅';
@@ -131,7 +131,7 @@ function updateAlerts() {
     if (warn2 === 1 || energy2 > threshold2) {
         r2Alert.className = 'param-card alert-card';
         r2Alert.querySelector('.param-icon').textContent = '⚠️';
-        r2Msg.textContent = `Vượt ngưỡng ${(energy2 - threshold2).toFixed(1)} kWh`;
+        r2Msg.textContent = `Vượt ngưỡng ${(threshold2).toFixed(1)} kWh`;
     } else {
         r2Alert.className = 'param-card alert-card success';
         r2Alert.querySelector('.param-icon').textContent = '✅';
@@ -317,3 +317,4 @@ function renderPaymentTable() {
         });
     });
 }
+
